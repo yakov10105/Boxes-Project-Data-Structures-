@@ -1,0 +1,39 @@
+﻿<Page x:Class="Boxes.View.BuyPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Boxes.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="BuyPage">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Length and Width :"/>
+                <TextBox x:Name="tbxWdth" Width="100"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Height :" TextAlignment="Center"/>
+                <TextBox x:Name="tbxHght" Width="100"/>
+            </StackPanel>
+            <StackPanel Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Quantity :" TextAlignment="Center"/>
+                <TextBox x:Name="tbxQTY" Width="100"/>
+            </StackPanel>
+            <Button x:Name="btnBuy" Content="Buy" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Click="BtnBuy_Click"/>
+        </Grid>
+        <ListView x:Name="lstBoxes" Grid.Row="1" />
+    </Grid>
+</Page>
